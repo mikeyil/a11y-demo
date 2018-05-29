@@ -1,0 +1,406 @@
+/* LINKS & BUTTONS */
+
+a {
+	color: #0000df;
+	text-decoration: none;
+}
+a:focus,
+a:hover,
+a:active {
+	/* outline: none; /* never! */
+	text-decoration: underline;
+	color: #0000df;
+}
+
+a.selected {
+	color: #267387;
+}
+
+.btn {
+	display: inline-block;
+	padding: 7px 14px;
+	background-image: linear-gradient(-180deg, #fff 85%, #d8d8d8 100%);
+	background-color: #fff;
+	border: 2px solid #267387;
+	border-radius: 8px;
+	font-size: 18px;
+	font-size: 1.8rem;
+	color: #267387;
+	text-decoration: none;
+	transition: border 250ms, color 250ms, background 250ms;
+}
+.btn:hover:not(.disabled),
+.btn:focus:not(.disabled),
+.btn:active:not(.disabled) {
+	color: #fff;
+	background: #267387;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SKIP LINKS / SR-ONLY / SR-ONLY-FOCUSABLE */
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.sr-only-focusable:focus {
+	position: inherit;
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	clip: inherit;
+	border: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FONT */
+
+.contrast {
+	display: block;
+	padding: 15px;
+	color: #fff;
+	background: #000;
+	margin-bottom: 15px;
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+.contrast p {
+	margin: 0;
+}
+.contrast.min-aaa {
+	color: #969696;
+}
+.contrast.min-aa {
+	color: #757575;
+}
+.contrast.low-aa {
+	color: #737373;
+}
+.contrast.low-aaa {
+	color: #949494;
+}
+.contrast.large {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+.contrast.large.min-aa {
+	color: #5c5c5c;
+}
+
+
+
+
+
+.font-too-small {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+.font-size-absolute {
+	font-size: 14px;
+}
+
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADINGS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+	font-style: inherit;
+}
+
+.heading1,
+.heading2,
+.heading3,
+.heading4,
+.heading5,
+.heading6 {
+	font-family: Raleway, 'Times New Roman', serif;
+}
+
+.heading1 {
+	font-size: 32px;
+	font-size: 3.2rem;
+}
+
+.heading2 {
+	font-size: 26px;
+	font-size: 2.6rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.heading3 {
+	font-size: 19px;
+	font-size: 1.9rem;
+}
+
+.heading4 {
+	font-size: 15px;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+	padding: 30px;
+}
+
+.error {
+	color: #df0000;
+}
+
+.content-heading {
+	padding-top: 50px;
+}
+.content-section {
+	padding: 10vh 0 90vh;
+}
+
+table {
+	width: 100%;
+}
+th,
+td {
+	text-align: center;
+	padding: 15px;
+}
+
+.screenreader-chart td,
+.screenreader-chart th {
+	width: 33.333%;
+}
+.screenreader-chart td {
+	text-align: left;
+}
+
+.nav-main {
+	position: fixed;
+	height: 30px;
+	top: 0;
+	padding: 7px 30px;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 3px 3px 0 #00000026;
+	margin-left: -30px;
+	margin-right: -30px;
+	z-index: 1;
+}
+
+.nav-list {
+	list-style: none;
+	padding: 0;
+}
+.nav-list li {
+	position: relative;
+	display: inline-block;
+}
+.nav-list > li + li {
+	margin-left: 20px;
+}
+.nav-list .dropdown:after {
+	content: '\e114';
+	font-family: 'Glyphicons Halflings';
+  font-size: 10px;
+  font-size: 1rem;
+  margin-left: 3px;
+}
+.nav-list .subnav {
+	display: none;
+	position: absolute;
+	top: 100%;
+	min-width: 170px;
+	padding: 0;
+	background: #fff;
+	list-style: none;
+	z-index: 1;
+	box-shadow: 0 3px 3px 0 #00000026;
+}
+.nav-list .subnav li {
+	display: block;
+}
+.nav-list .subnav a {
+	display: block;
+	padding: 5px 12px;
+	transition: all 250ms;
+}
+.nav-list .subnav a:focus,
+.nav-list .subnav a:active,
+.nav-list .subnav a:hover {
+	background-color: #efefef;
+	text-decoration: none;
+}
+.nav-list .dropdown.open .subnav {
+	display: block;
+}
+.nav-list .dropdown.open > a {
+	text-decoration: underline;
+}

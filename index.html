@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Thinking Universa11y: Development demo</title>
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet" />
+	<link href="selectric.css" type="text/css" rel="stylesheet" />
+	<link href="tabs.css" type="text/css" rel="stylesheet" />
+	<link href="main.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#main-content" class="sr-only sr-only-focusable">
+	Skip to main content
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+<nav class="nav-main">
+	<ul class="nav-list">
+		<li><a href="index.html">Home</a></li>
+		<li class="dropdown"><a href="#keyboard-access">Keyboard Access</a>
+			<ul class="subnav">
+				<li><a href="#links-buttons">Links &amp; Buttons</a></li>
+				<li><a href="#form">Form</a></li>
+				<li><a href="#dynamic-content">Dynamic content</a></li>
+			</ul>
+		</li>
+		<li class="dropdown"><a href="#visual-access">Visual Access</a>
+			<ul class="subnav">
+				<li><a href="#contrast">Contrast</a></li>
+				<li><a href="#font-size">Font Size</a></li>
+			</ul>
+		</li>
+		<li class="dropdown"><a href="#screenreader-compatibility">Screen reader compatibility</a>
+			<ul class="subnav">
+				<li><a href="#visibility">Visibility</a></li>
+				<li><a href="#images">Images</a></li>
+				<li><a href="#headings">Headings</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<h1 class="heading1">Thinking Universa11y: Development demo</h1>
+
+<main id="main-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="content-heading" id="keyboard-access">
+		<h2 class="heading1">Keyboard Access</h2>
+	</div>
+
+	<section class="content-section" id="links-buttons">
+		<h3 class="heading2">Links vs Buttons</h3>
+
+		<table>
+			<thead>
+				<tr>
+					<th>
+						<button class="btn">Button</button>
+					</th>
+					<th>
+						<a href="#links-buttons">Link</a><br />
+						<a href="#links-buttons" class="selected">Selected link</a>
+					</th>
+					<th><span class="btn">span</span>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Triggers some event on the page</td>
+					<td>Distinctly triggers navigation</td>
+					<td>Not focusable by default</td>
+				</tr>
+				<tr>
+					<td>May trigger navigation as a side-effect</td>
+					<td></td>
+					<td>Browsers don't know how to handle</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section class="content-section" id="form">
+		<h3 class="heading2">Demo Form</h3>
+		<form>
+			<div>
+
+				<label>Name<br />
+					<input name="name" />
+				</label>
+
+			</div>
+			<div>
+
+			<label for="emailElement">Email</label><br />
+			<input name="email" id="emailElement" type="email" />
+			</div>
+
+			<div>
+			<label>Prefix<br />
+					<select name="prefix" class="selectric">
+						<option value="none" selected>None</option>
+						<option value="mrs">Mrs</option>
+						<option value="mr">Mr</option>
+						<option value="cpt">Cpt</option>
+					</select>
+				</label>
+			</div>
+			<div>
+			<label>Suffix<br />
+					<select name="suffix">
+						<option value="none" selected>None</option>
+						<option value="jr">Jr</option>
+						<option value="sr">Sr</option>
+						<option value="esq">Esq</option>
+					</select>
+				</label>
+			</div>
+			<button type="submit" class="sr-only sr-only-focusable">Submit</button>
+		</form>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<section class="content-section" id="dynamic-content">
+		<h3 class="heading2">Dynamic Content</h3>
+
+		<!-- Button trigger modal -->
+		<button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+		  Launch demo modal
+		</button>
+
+		<!-- Bootstrap 3 Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+
+		      	<!-- w3.org tabs example -->
+					  <div class="tabs">
+					    <div role="tablist" aria-label="Entertainment">
+					      <button role="tab"
+					            aria-selected="true"
+					            aria-controls="nils-tab"
+					            id="nils">
+					        Nils Frahm
+					      </button>
+					      <button role="tab"
+					            aria-selected="false"
+					            aria-controls="agnes-tab"
+					            id="agnes"
+					            tabindex="-1">
+					        Agnes Obel
+					      </button>
+					      <button role="tab"
+					            aria-selected="false"
+					            aria-controls="complexcomplex"
+					            id="complex"
+					            tabindex="-1"
+					            data-deletable="">
+					        Joke
+					      </button>
+					    </div>
+					    <div tabindex="0"
+					       role="tabpanel"
+					       id="nils-tab"
+					       aria-labelledby="nils">
+					      <p>
+					        Nils Frahm is a German musician, composer and record producer based in Berlin. He is known for combining classical and electronic music and for an unconventional approach to the piano in which he mixes a grand piano, upright piano, Roland Juno-60, Rhodes piano, drum machine, and Moog Taurus.
+					      </p>
+					    </div>
+					    <div tabindex="0"
+					       role="tabpanel"
+					       id="agnes-tab"
+					       aria-labelledby="agnes"
+					       hidden="">
+					      <p>
+					        Agnes Caroline Thaarup Obel is a Danish singer/songwriter. Her first album, Philharmonics, was released by PIAS Recordings on 4 October 2010 in Europe. Philharmonics was certified gold in June 2011 by the Belgian Entertainment Association (BEA) for sales of 10,000 Copies.
+					      </p>
+					    </div>
+					    <div tabindex="0"
+					       role="tabpanel"
+					       id="complexcomplex"
+					       aria-labelledby="complex"
+					       hidden="">
+					      <p>
+					        Fear of complicated buildings:
+					      </p>
+					      <p>
+					        A complex complex complex.
+					      </p>
+					    </div>
+					  </div>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<p tabindex="0">Focusable by keyboard</p>
+		<p id="jsFocusEl" tabindex="-1">Focusable by JS, click, but not keyboard</p>
+		<button class="btn" id="jsFocusButton">^^ Focus that element ^^</button>
+
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="content-heading" id="visual-access">
+		<h2 class="heading1">Visual Access</h2>
+	</div>
+
+	<section class="content-section" id="contrast">
+		<h3 class="heading2">Contrast</h3>
+		
+		<div class="contrast min-aaa">
+			<p>This paragraph has the minimum contrast for AAA compliance</p>
+		</div>
+		<div class="contrast min-aa">
+			<p>This paragraph has the minimum contrast for AA compliance</p>
+		</div>
+		<div class="contrast large min-aa">
+			<p>This paragraph has low contrast, but it's big enough to barely make AA compliance</p>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section class="content-section" id="font-size">
+		<h3 class="heading2">Font Sizes</h3>
+		
+		<p>This is normal body text</p>
+		<p class="font-too-small">This is too small</p>
+		<p class="font-size-absolute">This font won't scale properly</p>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="content-heading" id="screenreader-compatibility">
+		<h2 class="heading1">Screenreader Compatibility</h2>
+	</div>
+
+	<section class="content-section" id="visibility">
+		<h3 class="heading2">Visibility</h3>
+		
+		<table class="screenreader-chart">
+			<tr>
+				<td></td>
+				<th>
+					Visible to screen reader
+				</th>
+				<th>
+					Hidden from screen reader
+				</th>
+			</tr>
+			<tr>
+				<th>Visible to display</th>
+				<td>
+					Regular ol' text
+				</td>
+				<td>
+					<pre>&lt;div aria-hidden="true"&gt;<br />&nbsp;&nbsp;No screenreaders<br />&lt;/div&gt;</pre>
+				</td>
+			</tr>
+			<tr>
+				<th>Hidden from display</th>
+				<td>
+					<pre>&lt;div class="sr-only"&gt;<br />&nbsp;&nbsp;Readers only<br />&lt;/div&gt;</pre>
+				</td>
+				<td>
+					<pre>&lt;div hidden&gt;<br />&nbsp;&nbsp;Not visible to anything<br />&lt;/div&gt;</pre>
+				</td>
+			</tr>
+		</table>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section class="content-section" id="images">
+		<h3 class="heading2">Images &amp; Captions</h3>
+		
+		<div class="row">
+			<figure class="col-sm-6">
+				<img src="sample-image.jpg" class="img-responsive" alt="toucan with beak, and then without beak" />
+				<figcaption>An example of a surprising bird</figcaption>
+			</figure>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<section class="content-section" id="headings">
+		<h3 class="heading2">Headings</h3>
+		
+		<h3 class="heading3">A natural &lt;h3&gt; element</h3>
+		<p>What if the designer wants this to be smaller? Or bigger?</p>
+
+		<h4 class="heading4">A natural &lt;h4&gt; element</h4>
+		<p>What if the designer wants this to be smaller? Or bigger?</p>
+
+		<h4 class="heading2">A natural &lt;h4&gt; element</h4>
+		<p>What if the designer wants this to be smaller? Or bigger?</p>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</main>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="selectric.js"></script>
+<script type="text/javascript" src="tabs.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
